@@ -1,0 +1,18 @@
+\input book_packages.tex
+
+\hypersetup{draft=true}
+
+\input book_cover.tex
+
+\input legal_notice.tex
+
+\pagenumbering{arabic}
+
+\thispagestyle{plain}
+\runningtitle{Author Index}
+\phantomsection
+\addcontentsline{toc}{part}{Author Index}
+\markboth{Author Index}{Author Index}
+\input{book.ind}
+
+\end{document}

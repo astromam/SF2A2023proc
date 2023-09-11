@@ -1,0 +1,102 @@
+
+\makeindex
+
+\newcommand{\tocline}[2]{
+\addcontentsline{toc}{section}{
+\normalfont{#1}
+	\\
+\textsl{#2}
+}}
+
+
+% SET BACKGORUND IMAGE IN COVER PAGE, DO NOT CHANGE
+\newcommand\BackgroundPic{
+\put(0,0){
+\parbox[b][\paperheight]{\paperwidth}{
+\vfill
+\vspace{2.5cm}
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{background.png}
+\vfill
+}}}
+
+
+% DEFINE \clearemptydoublepage to have a real blank page
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}
+}
+
+\renewcommand{\contentsname}{\centering\Huge{Contents}}
+\renewcommand{\indexname}{\centering\Huge{Author Index}}
+\newcommand{\consortium}[1]{#1}
+
+% BACKGROUND COLOR, DO NOT CHANGE
+\definecolor{mybackground}{RGB}{30,102,166}
+
+% NOT SURE THIS IS NEEDED
+\author{}
+\title{}
+
+\begin{document}
+\thispagestyle{empty}
+
+% BACKGROUND COLOR AND PICTURE
+\newpagecolor{mybackground}\afterpage{\restorepagecolor}
+\AddToShipoutPicture*{\BackgroundPic}
+
+
+% GENERAL TITLE OF THE PROCEEDING BOOK
+\pagenumbering{roman}
+\vspace*{-1.0cm}
+\framebox{
+\parbox{0.9\textwidth}{
+\begin{center}
+\textcolor{white}{\Huge \bf Proceedings of the annual meeting\\ of the French Society of\\ Astronomy \& Astrophysics }
+\end{center}
+}}
+
+
+% EDITORS: TO UPDATE EACH YEAR
+\vspace{1.2cm}
+\noindent \textcolor{lightgray}{\bf Editors}\\
+\noindent \textcolor{lightgray}{J. Richard, A. Siebert, E. Lagadec, N. Lagarde, O. Venot, J. Malzac, J.-B. Marquette, M. N'Diaye, D. Briot}
+
+
+\vspace{0.1cm}
+
+% CONFERENCE PICTURE/LOGO : TO UPDATE EACH YEAR
+\begin{figure}[hb]
+\centering
+\includegraphics[angle=0,width = 0.6\textwidth]{Poster.jpg}
+\end{figure}
+\vspace{-2cm}
+
+% LOCATION AND DATE: TO UPDATE EACH YEAR
+\begin{center}
+\begin{tabular}{l}
+{\Large \bf June 7-10, 2022}
+\end{tabular}
+\end{center}
+
+%SPONSORS, ADD LOGOS TO THE TABLE: TO UPDATE EACH YEAR
+\vspace{0.6cm}
+\begin{center}
+\begin{tabular}{rl}
+\begin{tabular}{r}
+\noindent \textcolor{lightgray}{\bf Sponsored by}
+\end{tabular}&
+\begin{tabular}{l}
+%\includegraphics[angle=0,height = 2.0cm]{logo_INSU.png}
+%\includegraphics[angle=0,width = 0.6\textwidth]{LOGOS.png}\\
+\includegraphics[angle=0,height=1.2cm]{LOGOS.png}
+\end{tabular}
+\end{tabular}
+\end{center}
+
+\newpage
+%\clearemptydoublepage
+%\pagestyle{plain}
+
+%\setcounter{page}{1}

@@ -1,0 +1,29 @@
+\documentclass{sf2a-conf2022}
+\usepackage{pdfpages}
+\usepackage{xcolor,mdframed}
+\usepackage{eso-pic,graphicx} %,epsf,psfig}
+\usepackage{aeguill}
+\pagestyle{myheadings}
+%\usepackage[utf8]{inputenc} 
+%\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{fontspec}
+%\fontspec{Linux Libertine O}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{csquotes} % csquotes va utiliser la langue définie dans babel
+% pour la page de garde
+\usepackage{afterpage}% for "\afterpage"
+\usepackage{pagecolor}% With option pagecolor={somecolor or none}
+
+\usepackage{hyperref}
+
+\hypersetup{linkcolor=blue,colorlinks=true}
+\pdfstringdefDisableCommands{%
+  \def\\{}%
+  \def\odot{}%
+  \def\texttt#1{<#1>}%
+}
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{naturalnames}{hyperref}
