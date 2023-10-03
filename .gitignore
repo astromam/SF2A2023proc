@@ -1,2 +1,6 @@
 
 *.ini
+
+*.bak
+
+__pycache__/
