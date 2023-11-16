@@ -1,7 +1,9 @@
 INSTRUCTIONS
 ------------
 
-- create the architecture to store the various contributions. From the proceeding root directory the architecture  must follow proceeding_ROOT/contrib/SXX/Author_SXX/
+- Collect as soon as possible the list of participants of the French Astrophysics week in csv file with the fields First Name, Last Name and Email (This will be useful later with the make-listparticipants.tex scripts at the finalization of the book). 
+
+- Create the architecture to store the various contributions. From the proceeding root directory the architecture  must follow proceeding_ROOT/contrib/SXX/Author_SXX/
 
 - Move the contributions (the tex and bib files and the associated PDF figures) into the sub-directory contrib/SXX/Author_SXX/ where SXX is the session of the contribution (S01, S02, ...,S20...) and run the script check_contrib.py on the files. It will make a copy of the file, translate the contribution to pure latex, verify the existence of the figures and test compile the contribution.
 
@@ -40,7 +42,7 @@ Or
 	Once executed, look at the content of make-book.log to check the way the contributions were included.
 	The script may have changed the page counter of one or several contributions. In that case the script will ask the permission to execute the command 'make-contrib.py'
 
-- Edit the inputdpdf.tex file (check for misspelling and bad indexes)
+- Edit the inputpdf.tex file (check for misspelling and bad indexes)
 
 - Edit appropriately the files book_packages.tex, liste_participants.tex and book.tex
 
@@ -55,6 +57,18 @@ Or
 	cd contrib
 	tar rhvf book.tar book.pdf participants.pdf contents.pdf authors_index.pdf foreword.pdf index.html 
 	gzip -f book.tar
+
+- link the alias with the associated files
+	cd contrib
+	ln -s S*/*/*_S*.pdf . 
+	ln -s S*/S*.pdf . 
+	ln -s S*/*/*_s*.pdf . (for session name sXX instead of SXX)
+and delete all the files/figures which do not correspond to the alias. 
+
+- create the archive of the links for the website
+	cd contrib
+	tar -cvzhf allpdf.tar.gz 2023sf2a*.pdf
+
 
 - Once the proceedings are online, send abstract_ads.tex to ADS. Follow the procedure describe at this location: https://ui.adsabs.harvard.edu/help/data_faq/conf_proc
 
