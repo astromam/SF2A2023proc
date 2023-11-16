@@ -80,7 +80,7 @@ t = string.Template('\\textbf{ $LAST $FIRST } (\\email{ $EMAIL })\\\\\n')
 
 listparticipants.write('\\section*{\\Large\\bf  List of participants}\n\n\\vskip 35truemm\n\n')
 
-with open(mycsvfile, newline='') as csvfile:
+with open(mycsvfile, newline='', encoding='utf-8-sig') as csvfile:
     reader = csv.DictReader(csvfile, delimiter=mydel)
     seen = []
     for row in reader:
