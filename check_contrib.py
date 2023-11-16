@@ -156,7 +156,7 @@ if __name__ == "__main__":
     session = sys.argv[1]
     author = sys.argv[2]
 
-    mydir = '/Users/mndiaye/Nextcloud/2023_SF2A_proceedings/contrib/' +session+'/'+author+'_'+session+'/' # 'contrib/'+session+'/'+author+'_'+session+'/'
+    mydir = 'contrib/'+session+'/'+author+'_'+session+'/'
     contribution = mydir+author+'_'+session+'.tex'
     bibtexname = author+'_'+session
     filename = author+'_'+session+'.tex'
