@@ -69,7 +69,7 @@
 \def\email#1{{e-mail: \tt#1}}
 \newcount\@c@thr@\@c@thr@=0
 \def\author#1{\global\advance\@c@thr@ by 1
-          \global\expandafter\edef\csname @thr@\romannumeral\@c@thr@\endcsname{#1}
+          \global\expandafter\def\csname @thr@\romannumeral\@c@thr@\endcsname{#1}
           \global\expandafter\def\csname @ddrss@\romannumeral\@c@thr@\endcsname{}
           \global\expandafter\def\csname @scndddrss@\romannumeral\@c@thr@\endcsname{}
           \global\expandafter\def\csname @smddrss@\romannumeral\@c@thr@\endcsname{}}%\author
@@ -249,8 +249,8 @@
 %%-----------------------------------------------------------------------------
 %% --> MESSAGES
 %%-----------------------------------------------------------------------------
-\def\@MSSG@TtrGlbl{The title will be set by the publisher.}
-\def\@MSSG@rnnghd{Give a shorter title using $\backslash${\tt runningtitle}}
+\def\@MSSG@TtrGlbl{SF2A 2023}
+\def\@MSSG@rnnghd{SF2A 2023}
 %%-----------------------------------------------------------------------------
 %% --> HEAD and FOOT
 %%-----------------------------------------------------------------------------
