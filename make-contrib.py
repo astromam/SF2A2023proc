@@ -45,6 +45,7 @@ log = open('make-contrib.log','w')
 # Start actual work
 wd = os.getcwd() # get current directory
 mypattern = re.compile(r'^S\d+$')
+print(mypattern)
 
 list_error=[]
 
@@ -59,23 +60,28 @@ for num in range(len(sessions)):
     log.write("----------------------------------------\n")
 
     session_num = list(session.values())[0][0]
+    print(list(session.values())[0])
         
     for nom in list(session.values())[0]:
+        print(f'\nnom: {nom}')
         match = mypattern.match(nom)
+        print(f'match: {match}')
         
         # Composition des noms de fichiers
         if match:
-            path = 'contrib/' + session_num
+            path = 'contrib/' + session_num 
             filebase = 'contrib/' + session_num + '/' + nom
             bibtex = False
-        else :
+        else:
             path = 'contrib/' + session_num + '/' + nom
             filebase = 'contrib/' + session_num + '/' + nom + '/' + nom
             bibtex = True
+           
 
         print('Processing '+filebase)
         log.write('Processing '+filebase+'\n')
         fullpath  = wd +'/'+path
+        print(f'fullpath: {fullpath}')
 
         # copying bst and cls files to location
         process = subprocess.run(['cp', bstfile, fullpath+'/.'])

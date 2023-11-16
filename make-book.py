@@ -96,6 +96,7 @@ for num in range(len(sessions)):
         match = mypattern.match(nom)
         
         # Set base directory
+        print(f'match: {match}')
         if match:
             filebase = 'contrib/' + session_num + '/' + nom
         else :
